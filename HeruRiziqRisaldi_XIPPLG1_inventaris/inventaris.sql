@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2025 at 05:50 AM
+-- Generation Time: Nov 17, 2025 at 08:17 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `barang` (
   `id` int(11) NOT NULL,
-  `nama_barang` varchar(225) NOT NULL,
+  `nama_barang` varchar(100) NOT NULL,
   `kategori_id` int(11) DEFAULT NULL,
   `stok` int(11) NOT NULL,
   `harga` decimal(12,2) NOT NULL,
@@ -47,7 +47,8 @@ INSERT INTO `barang` (`id`, `nama_barang`, `kategori_id`, `stok`, `harga`, `tang
 (3, 'handphone 3', 1, 2, '20000.00', '2008-01-26'),
 (4, 'Televisi', 1, 21, '20000.00', '2008-01-26'),
 (5, 'handphone 4', 1, 21, '20000.00', '2008-01-26'),
-(6, 'handphone', 1, 21, '2000000.00', '2008-01-26');
+(6, 'handphone', 1, 21, '2000000.00', '2008-01-26'),
+(7, 'Vas bunga', 2, 21, '50000.00', '2008-12-26');
 
 -- --------------------------------------------------------
 
@@ -57,7 +58,7 @@ INSERT INTO `barang` (`id`, `nama_barang`, `kategori_id`, `stok`, `harga`, `tang
 
 CREATE TABLE `kategori` (
   `id` int(11) NOT NULL,
-  `nama_kategori` varchar(100) NOT NULL
+  `nama_kategori` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -94,7 +95,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `kategori`
